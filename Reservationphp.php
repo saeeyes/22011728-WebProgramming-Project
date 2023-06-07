@@ -6,7 +6,6 @@ $mysqli = mysqli_connect("localhost", "root", "", "mysql");
 $seatIds = explode(",", $_POST['seat_id']);
 $a=count($seatIds);
 
- // 예매가 완료된 좌석의 상태를 "예약됨"으로 업데이트
 
 for ($i = 0; $i < $a; $i++) {
     $updateQuery = "UPDATE seat SET status = '1' WHERE no=$seatIds[$i]";
